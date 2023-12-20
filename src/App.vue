@@ -4,7 +4,7 @@
 
   <hr class="my-[10px]">
 
-  <h2 class="ml-[10px]">Polozky</h2>
+  <h1 class="ml-[10px] font-semibold">Polozky</h1>
   <ul>
     <li v-for="item in validItems" :key="`item-${item.id}`">
       <span @click="deleteItem(item)" class="mx-[20px]">X</span>
@@ -13,6 +13,12 @@
   </ul>
 
   <hr  class="my-[10px]">
+
+  <ul>
+    <li v-for="item in deletedItems" :key="`item-${item.id}`" class="mx-[20px]">
+      <s><span> - </span>{{ item.text }}</s>
+    </li>
+  </ul>
 
 </template>
 
