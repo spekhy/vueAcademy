@@ -5,7 +5,7 @@
   <h2>Polozky</h2>
   <ul>
     <li v-for="item in validItems" :key="`item-${item.id}`">
-      <span @click="deleteItem(item)" style="margin-right: 15px">X</span>
+      <span @click="deleteItem(item)" class="mx-[15px]">X</span>
       {{ item.text }}
     </li>
   </ul>
