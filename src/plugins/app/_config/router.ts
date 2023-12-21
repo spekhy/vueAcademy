@@ -2,12 +2,12 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
     {
-        path: ",
+        path: '/',
         name: 'Shopping List - List',
         component: () => import ('@/plugins/lib@shopping-list/shopping-lists/shopping-lists.vue')
     },
     {
-        path: ",
+        path: '/detail',
         name: 'Shopping List - Detail',
         component: () => import ('@/plugins/lib@shopping-list/shopping-list-detail/shopping-list-detail.vue')
     },
