@@ -1,5 +1,5 @@
 <template class="bg-black">
-  <input v-model="input" @keyup.enter="addItem()" class="border-[2px] border-black rounded-[5px] bg-stone-700 m-[10px]">
+  <input v-model="input" @keyup.enter="addItem()" class="border-[2px] border-black rounded-[5px] m-[10px]">
   <button @click="addItem()" class="border-[1px] border-white rounded-[5px] mx-[5px] px-[5px]">Add to list</button>
 
   <hr class="my-[10px]">
@@ -67,5 +67,13 @@
     background-color: black;
     color: white;
   }
+  #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
 </style>
