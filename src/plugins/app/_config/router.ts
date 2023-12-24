@@ -2,19 +2,19 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
     {
-        path: '/',
+        path: '/src/plugins/lib@shopping-list/shopping-lists/shopping-lists.vue',
         name: 'Shopping List - List',
-        component: () => import ('@/plugins/lib@shopping-list/shopping-lists/shopping-lists.vue')
+        component: ''
     },
     {
-        path: '/detail',
+        path: '/src/plugins/lib@shopping-list/shopping-list-detail/shopping-list-detail.vue',
         name: 'Shopping List - Detail',
-        component: () => import ('@/plugins/lib@shopping-list/shopping-list-detail/shopping-list-detail.vue')
+        component: ''
     },
     {
-        path: '/:catchAll(.*)',
+        path: '/src/plugins/app/views/not-found.vue',
         name: 'NotFound',
-        component: () => import('@/plugins/app/views/not-found.vue')
+        component: ''
     }
 ]
 
