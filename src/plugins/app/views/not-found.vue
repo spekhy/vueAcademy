@@ -1,4 +1,4 @@
-<template class="bg-black">
+<template>
 
 <div></div>
 

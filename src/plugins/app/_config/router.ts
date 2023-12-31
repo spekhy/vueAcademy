@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import shoppingList from '@/plugins/lib@shopping-list/shopping-lists/shopping-lists.vue';
-import shoppingDetail from '@/plugins/lib@shopping-list/shopping-list-detail/shopping-list-detail.vue';
+import shoppingList from '@/plugins/lib@shopping-list/shopping-lists/shopping-lists.vue'
+import shoppingDetail from '@/plugins/lib@shopping-list/shopping-list-detail/shopping-list-detail.vue'
 import notFound from '../views/not-found.vue'
 
 const routes = [
