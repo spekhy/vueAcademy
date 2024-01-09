@@ -29,12 +29,21 @@
 
     <div class="flex">
         <div class="w-[50%]">
-            <button class="bg-amber-[800]">pridanie</button>
+          
+          <input v-model="inputt" @keyup.enter="addCart()" class="border-[2px] border-black rounded-[5px] m-[10px]">
+          <button @click="addCart()" class="bg-amber-[800]">Add cart</button>
+          
+          <ul>
+            <li v-for="cart in addedCarts" :key="`item-${cart.id}`">
+              {{ cart.text }}
+            </li>
+          </ul>
+            
         </div>
         <div>
-            <div class="w-[50%]">
+          <div class="w-[50%]">
 
-            </div>
+          </div>
         </div>
     </div>
     
@@ -45,14 +54,15 @@
     data() {
       return {
         items: [],
-        input: ""
+        input: "",
+        cart: [],
       }
     },
 
     methods: {
       addItem() {
         
-        if (this.input.length===0) return;
+        if (this.input.length===0) return
         
         this.items.push({
           id: this.items.lenght+1,
@@ -64,12 +74,28 @@
 
       deleteItem(item) {
         item.is_deleted = true
+      },
+
+      addCart() {
+
+        if (this.inputt.length===0) return
+
+        this.cart.push({
+          id: this.cart.lenght+1,
+          text: this.inputt,
+          is_deleted: false
+        })
+        this.inputt = ""
       }
     },
 
     computed: {
       validItems() {
         return this.items.filter(item => !item.is_deleted)
+      },
+
+      addedCarts() {
+        return this.cart.filter(cart => !cart.is_deleted)
       },
 
       deletedItems() {
