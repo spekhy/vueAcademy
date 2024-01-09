@@ -28,23 +28,23 @@
     <hr  class="my-[10px]">
 
     <div class="flex">
-        <div class="w-[50%]">
+        <div class="w-[50%] h-screen bg-neutral-700">
           
-          <input v-model="inputt" @keyup.enter="addCart()" class="border-[2px] border-black rounded-[5px] m-[10px]">
+          <input v-model="input" @keyup.enter="addCart()" :name="inputt" class="border-[2px] border-black rounded-[5px] m-[10px]">
           <button @click="addCart()" class="bg-amber-[800]">Add cart</button>
           
           <ul>
-            <li v-for="cart in addedCarts" :key="`item-${cart.id}`">
+            <li v-for="cart in addedCarts" :key="`item-${cart.id}`" class="mx-[20px] text-white">
               {{ cart.text }}
             </li>
           </ul>
             
         </div>
-        <div>
-          <div class="w-[50%]">
-
-          </div>
+        
+        <div class="w-[50%] h-screen bg-neutral-800">
+          <h1>nie</h1>
         </div>
+
     </div>
     
 </template>
