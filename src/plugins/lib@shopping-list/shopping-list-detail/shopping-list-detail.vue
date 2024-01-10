@@ -46,6 +46,16 @@
       </div>
 
     </div>
+
+    <dialog id="d">
+      
+      <button onclick="d.openCartWin()">Open dialog win</button>
+
+      <div>
+        <button onclick="addCart()">Open dialog win</button>
+      </div>
+
+    </dialog>
     
 </template>
  
@@ -108,6 +118,9 @@
 
 <style>
 
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.095);
+  }
 
 
 </style>
